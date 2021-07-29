@@ -1,2 +1,37 @@
-body{background-color:#b3d9ff}body h1{color:#000}
+/*!*************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/main.scss ***!
+  \*************************************************************************************************************/
+.header {
+  background-color: #000;
+  height: 60px;
+  font-family: segoeui, Microsoft JhengHei, sans-serif; }
+  .header__nav {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    color: #fff; }
+  .header .nav__list {
+    display: inline;
+    margin: 0.5rem;
+    color: #fff;
+    font-size: 13px; }
+
+.productTabBar {
+  height: 60px;
+  font-family: segoeui, Microsoft JhengHei, sans-serif;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #202020; }
+  .productTabBar__type {
+    font-size: 1.5rem;
+    padding-left: 2.5rem; }
+  .productTabBar__tab {
+    display: inline;
+    margin: 1rem; }
+    .productTabBar__tab:hover {
+      cursor: pointer;
+      color: #ff3535;
+      border-bottom: 3px solid #ff3535;
+      border-radius: 2px 0px 2px 0px; }
 

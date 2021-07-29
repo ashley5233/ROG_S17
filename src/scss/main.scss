@@ -1,8 +1,57 @@
-$bg_color: #b3d9ff;
+$bg_color: #000;
+$nav_color: #202020;
 $font_color: black;
-body {
+
+.header {
   background-color: $bg_color;
-  h1 {
-    color: $font_color;
+  height: 60px;
+  font-family: segoeui, Microsoft JhengHei, sans-serif;
+  &__nav {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    color: #fff;
   }
+  &__nav__tabs {
+    // margin: 1rem;
+  }
+  .nav__list {
+    display: inline;
+    margin: 0.5rem;
+    color: #fff;
+    font-size: 13px;
+  }
+}
+
+.productTabBar {
+  height: 60px;
+  font-family: segoeui, Microsoft JhengHei, sans-serif;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $nav_color;
+
+  &__type {
+    font-size: 1.5rem;
+    padding-left: 2.5rem;
+  }
+
+  &__tab {
+    display: inline;
+    margin: 1rem;
+    &:hover {
+      cursor: pointer;
+      color: #ff3535;
+      border-bottom: 3px solid #ff3535;
+      border-radius: 2px 0px 2px 0px;
+    }
+  }
+}
+
+// table style
+@media screen and (max-width: 1281px) {
+}
+
+// mobile style
+@media screen and (max-width: 736px) {
 }
