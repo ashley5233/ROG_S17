@@ -1,14 +1,18 @@
 $bg_color: #000;
 $nav_color: #202020;
 $font_color: black;
+$hover_color: #ff3535;
 
 .header {
   background-color: $bg_color;
   height: 60px;
   font-family: segoeui, Microsoft JhengHei, sans-serif;
   &__nav {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     color: #fff;
   }
   &__nav__tabs {
@@ -19,6 +23,10 @@ $font_color: black;
     margin: 0.5rem;
     color: #fff;
     font-size: 13px;
+    &:hover {
+      cursor: pointer;
+      color: $hover_color;
+    }
   }
 }
 
@@ -41,10 +49,59 @@ $font_color: black;
     margin: 1rem;
     &:hover {
       cursor: pointer;
-      color: #ff3535;
-      border-bottom: 3px solid #ff3535;
+      color: $hover_color;
+      border-bottom: 3px solid $hover_color;
       border-radius: 2px 0px 2px 0px;
     }
+  }
+}
+.main {
+  width: 100%;
+  height: 100%;
+  &__KeyVersion {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+  }
+}
+.img {
+  // position: absolute;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  &__skyBg {
+    background: url(./../images/desktop/skyBg.jpg) center center no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  &__skyBg1 {
+    background: url(./../images/desktop/houseBg1.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 20;
+    left: 0;
+  }
+  &__skyBg2 {
+    background: url(./../images/desktop/houseBg2.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    opacity: 1;
+  }
+  &__nb {
+    background-image: url(./../images/desktop/nb.png);
+    background-size: cover;
+    background-position: center center;
+    position: absolute;
+    width: 667px;
+    height: 537px;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 1;
   }
 }
 
@@ -54,4 +111,9 @@ $font_color: black;
 
 // mobile style
 @media screen and (max-width: 736px) {
+  .productTabBar {
+    &__type {
+      font-size: 16px;
+    }
+  }
 }
