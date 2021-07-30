@@ -32,7 +32,6 @@ $hover_color: #ff3535;
 
 .productTabBar {
   height: 60px;
-  font-family: segoeui, Microsoft JhengHei, sans-serif;
   color: #fff;
   display: flex;
   justify-content: space-between;
@@ -55,6 +54,7 @@ $hover_color: #ff3535;
     }
   }
 }
+// Section one
 .main {
   width: 100%;
   height: 100%;
@@ -92,6 +92,7 @@ $hover_color: #ff3535;
     opacity: 1;
   }
   &__nb {
+    display: flex;
     background-image: url(./../images/desktop/nb.png);
     background-size: cover;
     background-position: center center;
@@ -102,6 +103,30 @@ $hover_color: #ff3535;
     left: 50%;
     transform: translateX(-50%);
     opacity: 1;
+  }
+}
+
+.content {
+  display: block;
+  flex-direction: column;
+  width: 55%;
+  margin: auto;
+  &__title {
+    background: url(./../images/desktop/ROG_ZEPHYRUS_TITLE.png) no-repeat;
+    background-position: center top;
+    height: 6em;
+  }
+  &__sentence {
+    height: 2em;
+    text-align: center;
+    color: #4d5afa;
+    font-weight: 900;
+    font-size: 2.5em;
+  }
+  &__info {
+    color: #fff;
+    font-size: 1em;
+    line-height: 1.8em;
   }
 }
 
