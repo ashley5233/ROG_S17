@@ -1,3 +1,12 @@
+@font-face {
+  font-family: rogfonts;
+  src: url(../fonts/AsusRog-Regular.ttf);
+}
+@font-face {
+  font-family: Trade-Gothic-LT-Bold;
+  src: url(../fonts/Trade_Gothic_LT_Bold.ttf);
+}
+
 $bg_color: #000;
 $nav_color: #202020;
 $font_color: black;
@@ -64,12 +73,12 @@ $title_color: #4d5afa;
   position: relative;
   &__KeyVersion {
     width: 100%;
-    padding-top: 60%;
+    padding-top: 30%;
   }
   .img {
     width: 100%;
     height: 100%;
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     &__skyBg {
@@ -86,13 +95,14 @@ $title_color: #4d5afa;
       background: url(./../images/desktop/houseBg2.png) no-repeat;
       background-size: cover;
       position: absolute;
-      opacity: 1;
     }
     &__nb {
-      background: url(./../images/desktop/nb.png) no-repeat center center;
+      background-image: url(./../images/desktop/nb.png);
       background-size: cover;
-      background-position: center center;
+      background-repeat: no-repeat;
+      background-position: center;
       position: absolute;
+
       max-width: 667px;
       max-height: 537px;
       top: 20%;
@@ -116,13 +126,14 @@ $title_color: #4d5afa;
     height: 2em;
     text-align: center;
     color: $title_color;
+    font-family: Trade-Gothic-LT-Bold;
     font-weight: 900;
-    font-size: 2.5em;
+    font-size: 3rem;
   }
   &__info {
     height: auto;
     color: #fff;
-    font-size: 1em;
+    font-size: 0.8em;
     line-height: 1.8em;
   }
 }
@@ -134,8 +145,69 @@ $title_color: #4d5afa;
   display: block;
   &__productImg {
     background: url(./../images/desktop/S17_Design_1_14.jpg);
-    background-size: 170%;
+    background-size: 150%;
     background-position: 50%;
+    position: relative;
+
+    &__block {
+      display: flex;
+      align-content: center;
+      width: 100%;
+      height: 50%;
+      flex-direction: column;
+      position: absolute;
+      top: 35%;
+      left: 60%;
+      width: 30%;
+    }
+
+    &__design {
+      font-family: rogfonts;
+      color: $title_color;
+      font-size: 2.5rem;
+    }
+
+    &__title {
+      font-family: Trade-Gothic-LT-Bold;
+      font-size: 2.5rem;
+      color: #fff;
+    }
+
+    &__info {
+      color: #fff;
+      font-size: 0.8rem;
+      line-height: 1.5rem;
+    }
+
+    &__features {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      &__ergonomic,
+      &__resilient,
+      &__ultra {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 50%;
+        margin: auto;
+      }
+
+      .adjective,
+      .item {
+        text-align: center;
+        color: #fff;
+        font-size: 0.8rem;
+      }
+      .keyword {
+        font-size: 2.5rem;
+        margin-top: -1rem;
+        margin-bottom: 1rem;
+        color: $title_color;
+        text-align: center;
+        font-family: Trade-Gothic-LT-Bold;
+      }
+    }
   }
 }
 
@@ -154,9 +226,14 @@ $title_color: #4d5afa;
   &__design {
     display: inline-block;
     width: calc(100% * 1 / 3);
-    height: 250px;
+    height: 300px;
     margin-right: -5px;
     background-color: #fff;
+
+    img {
+      border: 1px solid #fff;
+      object-fit: cover;
+    }
   }
 }
 

@@ -1,6 +1,14 @@
 /*!*************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/main.scss ***!
   \*************************************************************************************************************/
+@font-face {
+  font-family: rogfonts;
+  src: url(5009174bbb62c27533bc.ttf); }
+
+@font-face {
+  font-family: Trade-Gothic-LT-Bold;
+  src: url(b97b314b1be24e5559ff.ttf); }
+
 .header {
   background-color: #000;
   height: 60px;
@@ -47,11 +55,11 @@
   position: relative; }
   .section1__KeyVersion {
     width: 100%;
-    padding-top: 60%; }
+    padding-top: 30%; }
   .section1 .img {
     width: 100%;
     height: 100%;
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0; }
     .section1 .img__skyBg {
@@ -65,12 +73,12 @@
     .section1 .img__skyBg2 {
       background: url(05cb3bb3b7041f3d4102.png) no-repeat;
       background-size: cover;
-      position: absolute;
-      opacity: 1; }
+      position: absolute; }
     .section1 .img__nb {
-      background: url(1ad1d4da7e4d02513c19.png) no-repeat center center;
+      background-image: url(1ad1d4da7e4d02513c19.png);
       background-size: cover;
-      background-position: center center;
+      background-repeat: no-repeat;
+      background-position: center;
       position: absolute;
       max-width: 667px;
       max-height: 537px;
@@ -92,12 +100,13 @@
     height: 2em;
     text-align: center;
     color: #4d5afa;
+    font-family: Trade-Gothic-LT-Bold;
     font-weight: 900;
-    font-size: 2.5em; }
+    font-size: 3rem; }
   .content__info {
     height: auto;
     color: #fff;
-    font-size: 1em;
+    font-size: 0.8em;
     line-height: 1.8em; }
 
 .section2 {
@@ -106,8 +115,53 @@
   display: block; }
   .section2__productImg {
     background: url(d146e56b5d2f2031d2cc.jpg);
-    background-size: 170%;
-    background-position: 50%; }
+    background-size: 150%;
+    background-position: 50%;
+    position: relative; }
+    .section2__productImg__block {
+      display: flex;
+      align-content: center;
+      width: 100%;
+      height: 50%;
+      flex-direction: column;
+      position: absolute;
+      top: 35%;
+      left: 60%;
+      width: 30%; }
+    .section2__productImg__design {
+      font-family: rogfonts;
+      color: #4d5afa;
+      font-size: 2.5rem; }
+    .section2__productImg__title {
+      font-family: Trade-Gothic-LT-Bold;
+      font-size: 2.5rem;
+      color: #fff; }
+    .section2__productImg__info {
+      color: #fff;
+      font-size: 0.8rem;
+      line-height: 1.5rem; }
+    .section2__productImg__features {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%; }
+      .section2__productImg__features__ergonomic, .section2__productImg__features__resilient, .section2__productImg__features__ultra {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 50%;
+        margin: auto; }
+      .section2__productImg__features .adjective,
+      .section2__productImg__features .item {
+        text-align: center;
+        color: #fff;
+        font-size: 0.8rem; }
+      .section2__productImg__features .keyword {
+        font-size: 2.5rem;
+        margin-top: -1rem;
+        margin-bottom: 1rem;
+        color: #4d5afa;
+        text-align: center;
+        font-family: Trade-Gothic-LT-Bold; }
 
 .productImg {
   width: 100%;
@@ -123,9 +177,12 @@
   .product-list__design {
     display: inline-block;
     width: calc(100% * 1 / 3);
-    height: 250px;
+    height: 300px;
     margin-right: -5px;
     background-color: #fff; }
+    .product-list__design img {
+      border: 1px solid #fff;
+      object-fit: cover; }
 
 @media screen and (max-width: 736px) {
   .productTabBar__type {
