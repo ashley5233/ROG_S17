@@ -42,33 +42,30 @@
 
 .section1 {
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  display: block;
+  position: relative; }
   .section1__KeyVersion {
     width: 100%;
-    height: 100%;
-    display: block;
-    position: relative; }
+    padding-top: 60%; }
   .section1 .img {
     width: 100%;
     height: 100%;
-    position: relative; }
+    position: absolute;
+    top: 0;
+    left: 0; }
     .section1 .img__skyBg {
       background: url(01d5f2a0b49007ba7429.jpg) center center no-repeat;
       background-size: cover;
-      position: absolute;
-      top: 0;
-      left: 0; }
+      position: absolute; }
     .section1 .img__skyBg1 {
       background: url(c9aace966cfd9a2d6aa3.png) no-repeat;
       background-size: cover;
-      position: absolute;
-      top: 20;
-      left: 0; }
+      position: absolute; }
     .section1 .img__skyBg2 {
       background: url(05cb3bb3b7041f3d4102.png) no-repeat;
       background-size: cover;
       position: absolute;
-      bottom: 0;
       opacity: 1; }
     .section1 .img__nb {
       background: url(1ad1d4da7e4d02513c19.png) no-repeat center center;
@@ -80,31 +77,33 @@
       top: 20%;
       left: 50%;
       transform: translateX(-50%); }
-  .section1 .content {
-    display: flex;
-    flex-direction: column;
-    width: 55%;
-    margin-top: 50px;
-    margin: auto; }
-    .section1 .content__title {
-      background: url(5633eb7533ef12dffd98.png) no-repeat;
-      background-position: center top;
-      height: 6em; }
-    .section1 .content__sentence {
-      height: 2em;
-      text-align: center;
-      color: #4d5afa;
-      font-weight: 900;
-      font-size: 2.5em; }
-    .section1 .content__info {
-      height: auto;
-      color: #fff;
-      font-size: 1em;
-      line-height: 1.8em; }
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 55%;
+  margin: auto; }
+  .content__title {
+    background: url(5633eb7533ef12dffd98.png) no-repeat;
+    background-size: contain;
+    background-position: center top;
+    height: 6em; }
+  .content__sentence {
+    height: 2em;
+    text-align: center;
+    color: #4d5afa;
+    font-weight: 900;
+    font-size: 2.5em; }
+  .content__info {
+    height: auto;
+    color: #fff;
+    font-size: 1em;
+    line-height: 1.8em; }
 
 .section2 {
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  display: block; }
   .section2__productImg {
     background: url(d146e56b5d2f2031d2cc.jpg) no-repeat;
     background-size: cover; }

@@ -60,35 +60,32 @@ $title_color: #4d5afa;
 .section1 {
   width: 100%;
   height: 100%;
+  display: block;
+  position: relative;
   &__KeyVersion {
     width: 100%;
-    height: 100%;
-    display: block;
-    position: relative;
+    padding-top: 60%;
   }
   .img {
     width: 100%;
     height: 100%;
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
     &__skyBg {
       background: url(./../images/desktop/skyBg.jpg) center center no-repeat;
       background-size: cover;
       position: absolute;
-      top: 0;
-      left: 0;
     }
     &__skyBg1 {
       background: url(./../images/desktop/houseBg1.png) no-repeat;
       background-size: cover;
       position: absolute;
-      top: 20;
-      left: 0;
     }
     &__skyBg2 {
       background: url(./../images/desktop/houseBg2.png) no-repeat;
       background-size: cover;
       position: absolute;
-      bottom: 0;
       opacity: 1;
     }
     &__nb {
@@ -103,31 +100,30 @@ $title_color: #4d5afa;
       transform: translateX(-50%);
     }
   }
-  .content {
-    display: flex;
-    flex-direction: column;
-    width: 55%;
-
-    margin-top: 50px;
-    margin: auto;
-    &__title {
-      background: url(./../images/desktop/ROG_ZEPHYRUS_TITLE.png) no-repeat;
-      background-position: center top;
-      height: 6em;
-    }
-    &__sentence {
-      height: 2em;
-      text-align: center;
-      color: $title_color;
-      font-weight: 900;
-      font-size: 2.5em;
-    }
-    &__info {
-      height: auto;
-      color: #fff;
-      font-size: 1em;
-      line-height: 1.8em;
-    }
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 55%;
+  margin: auto;
+  &__title {
+    background: url(./../images/desktop/ROG_ZEPHYRUS_TITLE.png) no-repeat;
+    background-size: contain;
+    background-position: center top;
+    height: 6em;
+  }
+  &__sentence {
+    height: 2em;
+    text-align: center;
+    color: $title_color;
+    font-weight: 900;
+    font-size: 2.5em;
+  }
+  &__info {
+    height: auto;
+    color: #fff;
+    font-size: 1em;
+    line-height: 1.8em;
   }
 }
 
@@ -135,6 +131,7 @@ $title_color: #4d5afa;
 .section2 {
   width: 100%;
   height: 100%;
+  display: block;
   &__productImg {
     background: url(./../images/desktop/S17_Design_1_14.jpg) no-repeat;
     background-size: cover;
