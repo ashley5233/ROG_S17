@@ -145,7 +145,10 @@ $title_color: #4d5afa;
   display: flex;
   flex-direction: column;
   width: 55%;
+  height: auto;
   margin: auto;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
   &__title {
     background: url(./../images/desktop/ROG_ZEPHYRUS_TITLE.png) no-repeat;
     background-size: contain;
@@ -166,6 +169,12 @@ $title_color: #4d5afa;
     font-size: 0.8em;
     line-height: 1.8em;
   }
+}
+.iconBox {
+  display: flex;
+  margin: auto;
+  width: 35%;
+  height: 100px;
 }
 
 // Section 2

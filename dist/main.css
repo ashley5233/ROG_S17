@@ -111,7 +111,10 @@
   display: flex;
   flex-direction: column;
   width: 55%;
-  margin: auto; }
+  height: auto;
+  margin: auto;
+  margin-top: 4rem;
+  margin-bottom: 4rem; }
   .content__title {
     background: url(5633eb7533ef12dffd98.png) no-repeat;
     background-size: contain;
@@ -129,6 +132,12 @@
     color: #fff;
     font-size: 0.8em;
     line-height: 1.8em; }
+
+.iconBox {
+  display: flex;
+  margin: auto;
+  width: 35%;
+  height: 100px; }
 
 .section2 {
   width: 100%;
