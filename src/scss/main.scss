@@ -22,6 +22,7 @@ $title_color: #4d5afa;
   top: 0;
 }
 
+// mobile style
 @media screen and (min-width: 0px) {
   .header {
     background-color: $bg_color;
@@ -109,8 +110,6 @@ $title_color: #4d5afa;
         @include kv-image;
         width: 188px;
         height: 148px;
-        // width: 267px;
-        // height: 215px;
         background-image: url(../images/pad/nb.png);
         background-size: cover;
         background-repeat: no-repeat;
@@ -404,13 +403,657 @@ $title_color: #4d5afa;
 }
 
 @media screen and (min-width: 736px) {
+  // Section one
+  .section1 {
+    &__container {
+      min-width: 375px;
+    }
+    .img {
+      position: relative;
+      width: 100%;
+      padding-top: 50%;
+
+      &__skyBg {
+        background-image: url(./../images/desktop/skyBg.jpg);
+        @include kv-image;
+      }
+      &__houseBg1 {
+        background-image: url(./../images/desktop/houseBg1.png);
+        @include kv-image;
+      }
+      &__houseBg2 {
+        background-image: url(../images/desktop/houseBg2.png);
+        @include kv-image;
+        opacity: 1;
+        animation: skyBg_change 5s ease-out infinite;
+      }
+      &__nb {
+        @include kv-image;
+        width: 267px;
+        height: 215px;
+        background-image: url(../images/pad/nb.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation: nb_move 4s ease infinite;
+      }
+
+      @keyframes skyBg_change {
+        0% {
+          opacity: 1;
+        }
+        20% {
+          opacity: 0.6;
+        }
+        50% {
+          opacity: 0;
+        }
+        80% {
+          opacity: 0.6;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      @keyframes nb_move {
+        0% {
+          top: 50%;
+        }
+        50% {
+          top: 51%;
+        }
+        100% {
+          top: 50%;
+        }
+      }
+    }
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: auto;
+    margin: auto;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    &__title {
+      background: url(./../images/desktop/ROG_ZEPHYRUS_TITLE.png) no-repeat;
+      background-size: cover;
+      background-position: center;
+      height: 2.5em;
+    }
+    &__sentence {
+      height: 2em;
+      text-align: center;
+      color: $title_color;
+      font-family: Trade-Gothic-LT-Bold;
+      font-weight: 900;
+      font-size: 2.8rem;
+      padding-top: 2rem;
+    }
+    &__info {
+      height: auto;
+      color: #fff;
+      font-size: 0.9rem;
+      line-height: 1.7em;
+      text-align: center;
+    }
+  }
+  // .iconBox {
+  //   display: flex;
+  //   margin: auto;
+  //   width: 35%;
+  //   height: 100px;
+  // }
+
+  // Section 2
+  .section2 {
+    position: relative;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      margin: auto;
+      width: 70%;
+      margin-top: 1rem;
+      &__design {
+        font-family: rogfonts;
+        color: $title_color;
+        font-size: 2.8rem;
+      }
+
+      &__title {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        font-family: Trade-Gothic-LT-Bold;
+        font-size: 2.8rem;
+        color: #fff;
+      }
+
+      &__description {
+        width: 80%;
+        margin: auto;
+        color: #fff;
+        font-size: 1rem;
+        line-height: 1.5em;
+      }
+      &__features {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-top: 2rem;
+        &__ergonomic,
+        &__resilient,
+        &__ultra {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          width: 50%;
+          padding: 5px;
+          margin: auto;
+        }
+
+        .adjective,
+        .item {
+          text-align: center;
+          color: #fff;
+          font-size: 0.1rem;
+        }
+        .keyword {
+          font-size: 2.5rem;
+          margin: 0.3rem;
+          color: $title_color;
+          text-align: center;
+          font-family: Trade-Gothic-LT-Bold;
+        }
+      }
+    }
+
+    &__productImg {
+      width: 100%;
+      height: 600px;
+      margin-top: -10%;
+      background-image: url(./../images/desktop/S17_Design_1_14.jpg);
+      background-size: cover;
+      background-position: 30% 50%;
+    }
+  }
+
+  .productImg {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url(../images/desktop/S17_Design_2_14.jpg) no-repeat;
+    background-size: 280%;
+    background-position: 65% 10%;
+    &__description {
+      width: 85%;
+      height: 600px;
+      color: #fff;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      margin: auto;
+      text-align: center;
+    }
+  }
+
+  .product-list {
+    width: 100%;
+    height: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    &__design {
+      display: inline-block;
+      width: 400px;
+      // min-width: calc(100% * 1 / 4);
+      height: 250px;
+      img {
+        object-fit: cover;
+      }
+    }
+  }
+
+  // Section3
+  .section3 {
+    min-width: 375px;
+    height: 100%;
+    position: relative;
+
+    &__productInfo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      height: auto;
+      margin-top: 1rem;
+
+      &__name {
+        font-family: rogfonts;
+        font-size: 2.8rem;
+        color: $title_color;
+        margin: 1rem;
+      }
+
+      &__title {
+        font-family: Trade-Gothic-LT-Bold;
+        font-size: 2.8rem;
+        color: #fff;
+        margin: 1rem;
+      }
+
+      &__description {
+        width: 70%;
+        color: #fff;
+        font-size: 0.9rem;
+        text-align: center;
+        line-height: 1.5rem;
+        margin: 1.5rem;
+      }
+      &__blocks {
+        width: 70%;
+        height: 40%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        .feature {
+          display: flex;
+          flex-direction: column;
+          margin: 1.2rem;
+          &__data {
+            font-size: 2.3rem;
+            color: $title_color;
+            font-family: Trade-Gothic-LT-Bold;
+          }
+
+          &__description {
+            font-size: 0.8rem;
+            color: #fff;
+            padding-top: 0.5rem;
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    &__imgBox {
+      width: 100%;
+      padding-top: 50%;
+      position: relative;
+      &__ImgFans {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-image: url(../images/desktop/img__air1.jpeg);
+        background-size: 150%;
+        background-position: center center;
+        top: 0;
+        left: 0;
+        animation: fansChange 2s infinite ease-in;
+      }
+
+      @keyframes fansChange {
+        0% {
+          background-image: url(../images/desktop/img__air1.jpeg);
+        }
+        12% {
+          background-image: url(../images/desktop/img__air2.jpeg);
+        }
+        24% {
+          background-image: url(../images/desktop/img__air3.jpeg);
+        }
+        36% {
+          background-image: url(../images/desktop/img__air4.jpeg);
+        }
+        48% {
+          background-image: url(../images/desktop/img__air5.jpeg);
+        }
+        60% {
+          background-image: url(../images/desktop/img__air6.jpeg);
+        }
+        72% {
+          background-image: url(../images/desktop/img__air7.jpeg);
+        }
+        100% {
+          background-image: url(../images/desktop/img__air8.jpeg);
+        }
+      }
+    }
+  }
 }
 
-// mobile style
 @media screen and (min-width: 1281px) {
-  .productTabBar {
-    &__type {
-      font-size: 16px;
+  // Section one
+  .section1 {
+    &__container {
+      min-width: 375px;
+    }
+    .img {
+      position: relative;
+      width: 100%;
+      padding-top: 50%;
+
+      &__skyBg {
+        background-image: url(./../images/desktop/skyBg.jpg);
+        @include kv-image;
+      }
+      &__houseBg1 {
+        background-image: url(./../images/desktop/houseBg1.png);
+        @include kv-image;
+      }
+      &__houseBg2 {
+        background-image: url(../images/desktop/houseBg2.png);
+        @include kv-image;
+        opacity: 1;
+        animation: skyBg_change 5s ease-out infinite;
+      }
+      &__nb {
+        @include kv-image;
+        width: 267px;
+        height: 215px;
+        background-image: url(../images/pad/nb.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation: nb_move 4s ease infinite;
+      }
+
+      @keyframes skyBg_change {
+        0% {
+          opacity: 1;
+        }
+        20% {
+          opacity: 0.6;
+        }
+        50% {
+          opacity: 0;
+        }
+        80% {
+          opacity: 0.6;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      @keyframes nb_move {
+        0% {
+          top: 50%;
+        }
+        50% {
+          top: 51%;
+        }
+        100% {
+          top: 50%;
+        }
+      }
+    }
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: auto;
+    margin: auto;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    &__title {
+      background: url(./../images/desktop/ROG_ZEPHYRUS_TITLE.png) no-repeat;
+      background-size: cover;
+      background-position: center;
+      height: 2.5em;
+    }
+    &__sentence {
+      height: 2em;
+      text-align: center;
+      color: $title_color;
+      font-family: Trade-Gothic-LT-Bold;
+      font-weight: 900;
+      font-size: 2.8rem;
+      padding-top: 2rem;
+    }
+    &__info {
+      height: auto;
+      color: #fff;
+      font-size: 0.9rem;
+      line-height: 1.7em;
+      text-align: center;
+    }
+  }
+  // .iconBox {
+  //   display: flex;
+  //   margin: auto;
+  //   width: 35%;
+  //   height: 100px;
+  // }
+
+  // Section 2
+  .section2 {
+    position: relative;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      margin: auto;
+      width: 70%;
+      margin-top: 1rem;
+      &__design {
+        font-family: rogfonts;
+        color: $title_color;
+        font-size: 2.8rem;
+      }
+
+      &__title {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        font-family: Trade-Gothic-LT-Bold;
+        font-size: 2.8rem;
+        color: #fff;
+      }
+
+      &__description {
+        width: 80%;
+        margin: auto;
+        color: #fff;
+        font-size: 1rem;
+        line-height: 1.5em;
+      }
+      &__features {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-top: 2rem;
+        &__ergonomic,
+        &__resilient,
+        &__ultra {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          width: 50%;
+          padding: 5px;
+          margin: auto;
+        }
+
+        .adjective,
+        .item {
+          text-align: center;
+          color: #fff;
+          font-size: 0.1rem;
+        }
+        .keyword {
+          font-size: 2.5rem;
+          margin: 0.3rem;
+          color: $title_color;
+          text-align: center;
+          font-family: Trade-Gothic-LT-Bold;
+        }
+      }
+    }
+
+    &__productImg {
+      width: 100%;
+      height: 600px;
+      margin-top: -10%;
+      background-image: url(./../images/desktop/S17_Design_1_14.jpg);
+      background-size: cover;
+      background-position: 30% 50%;
+    }
+  }
+
+  .productImg {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url(../images/desktop/S17_Design_2_14.jpg) no-repeat;
+    background-size: 280%;
+    background-position: 65% 10%;
+    &__description {
+      width: 85%;
+      height: 600px;
+      color: #fff;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      margin: auto;
+      text-align: center;
+    }
+  }
+
+  .product-list {
+    width: 100%;
+    height: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    &__design {
+      display: inline-block;
+      width: 400px;
+      // min-width: calc(100% * 1 / 4);
+      height: 250px;
+      img {
+        object-fit: cover;
+      }
+    }
+  }
+
+  // Section3
+  .section3 {
+    min-width: 375px;
+    height: 100%;
+    position: relative;
+
+    &__productInfo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      height: auto;
+      margin-top: 1rem;
+
+      &__name {
+        font-family: rogfonts;
+        font-size: 2.8rem;
+        color: $title_color;
+        margin: 1rem;
+      }
+
+      &__title {
+        font-family: Trade-Gothic-LT-Bold;
+        font-size: 2.8rem;
+        color: #fff;
+        margin: 1rem;
+      }
+
+      &__description {
+        width: 70%;
+        color: #fff;
+        font-size: 0.9rem;
+        text-align: center;
+        line-height: 1.5rem;
+        margin: 1.5rem;
+      }
+      &__blocks {
+        width: 70%;
+        height: 40%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        .feature {
+          display: flex;
+          flex-direction: column;
+          margin: 1.2rem;
+          &__data {
+            font-size: 2.3rem;
+            color: $title_color;
+            font-family: Trade-Gothic-LT-Bold;
+          }
+
+          &__description {
+            font-size: 0.8rem;
+            color: #fff;
+            padding-top: 0.5rem;
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    &__imgBox {
+      width: 100%;
+      padding-top: 50%;
+      position: relative;
+      &__ImgFans {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-image: url(../images/desktop/img__air1.jpeg);
+        background-size: 150%;
+        background-position: center center;
+        top: 0;
+        left: 0;
+        animation: fansChange 2s infinite ease-in;
+      }
+
+      @keyframes fansChange {
+        0% {
+          background-image: url(../images/desktop/img__air1.jpeg);
+        }
+        12% {
+          background-image: url(../images/desktop/img__air2.jpeg);
+        }
+        24% {
+          background-image: url(../images/desktop/img__air3.jpeg);
+        }
+        36% {
+          background-image: url(../images/desktop/img__air4.jpeg);
+        }
+        48% {
+          background-image: url(../images/desktop/img__air5.jpeg);
+        }
+        60% {
+          background-image: url(../images/desktop/img__air6.jpeg);
+        }
+        72% {
+          background-image: url(../images/desktop/img__air7.jpeg);
+        }
+        100% {
+          background-image: url(../images/desktop/img__air8.jpeg);
+        }
+      }
     }
   }
 }
