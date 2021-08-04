@@ -360,7 +360,7 @@ $title_color: #4d5afa;
       height: 400px;
       background-image: url(../images/desktop/03__Performance.jpeg);
       background-position: center center;
-      background-size: 280%;
+      background-size: 270%;
     }
   }
 
@@ -686,6 +686,74 @@ $title_color: #4d5afa;
       img {
         object-fit: cover;
       }
+    }
+  }
+
+  // performance
+  .performance {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    &__content {
+      padding: 1rem;
+      &__name {
+        color: $title_color;
+        font-size: 3rem;
+        font-family: rogfonts;
+      }
+
+      &__title {
+        color: #fff;
+        font-size: 2.8rem;
+        font-family: Trade-Gothic-LT-Bold;
+        padding-top: 2rem;
+      }
+
+      &__info {
+        width: 85%;
+        color: #fff;
+        font-size: 0.9rem;
+        line-height: 1.2rem;
+        padding-top: 2rem;
+        margin: auto;
+
+        .comment {
+          padding-top: 1rem;
+          color: #999;
+        }
+      }
+    }
+
+    &__data {
+      color: #fff;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      .feature {
+        padding: 0.8rem;
+        margin: 0.8rem;
+        .keyword {
+          color: $title_color;
+          font-family: Trade-Gothic-LT-Bold;
+          font-size: 2.5rem;
+          padding-top: 0.5rem;
+          padding-bottom: 0.5rem;
+        }
+
+        .ad,
+        .item {
+          font-size: 0.3rem;
+        }
+      }
+    }
+
+    &__img {
+      width: 100%;
+      height: 600px;
+      background-image: url(../images/desktop/03__Performance.jpeg);
+      background-position: center center;
+      background-size: 200%;
     }
   }
 
@@ -1020,6 +1088,76 @@ $title_color: #4d5afa;
       img {
         object-fit: cover;
       }
+    }
+  }
+
+  // performance
+  .performance {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    &__content {
+      padding: 1rem;
+      &__name {
+        color: $title_color;
+        font-size: 3rem;
+        font-family: rogfonts;
+      }
+
+      &__title {
+        color: #fff;
+        font-size: 2.8rem;
+        font-family: Trade-Gothic-LT-Bold;
+        padding-top: 2rem;
+      }
+
+      &__info {
+        width: 55%;
+        color: #fff;
+        font-size: 0.9rem;
+        line-height: 1.2rem;
+        padding-top: 2rem;
+        margin: auto;
+
+        .comment {
+          padding-top: 1rem;
+          color: #999;
+        }
+      }
+    }
+
+    &__data {
+      width: 70%;
+      color: #fff;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: auto;
+      .feature {
+        padding: 0.8rem;
+        margin: 0.8rem;
+        .keyword {
+          color: $title_color;
+          font-family: Trade-Gothic-LT-Bold;
+          font-size: 2.5rem;
+          padding-top: 0.5rem;
+          padding-bottom: 0.5rem;
+        }
+
+        .ad,
+        .item {
+          font-size: 0.3rem;
+        }
+      }
+    }
+
+    &__img {
+      width: 100%;
+      height: 900px;
+      background-image: url(../images/desktop/03__Performance.jpeg);
+      background-position: center center;
+      background-size: 150%;
     }
   }
 
