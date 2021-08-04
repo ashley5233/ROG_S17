@@ -765,6 +765,9 @@
       font-size: 0.9rem;
       line-height: 1.9em;
       text-align: center; }
+  .iconBox {
+    display: flex;
+    justify-content: center; }
   .section2 {
     position: relative;
     width: 100%;

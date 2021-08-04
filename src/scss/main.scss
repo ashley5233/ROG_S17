@@ -944,7 +944,6 @@ $title_color: #4d5afa;
     margin: auto;
     padding-top: 4rem;
     padding-bottom: 4rem;
-    // margin-bottom: 10%;
     &__title {
       background: url(./../images/desktop/ROG_ZEPHYRUS_TITLE.png) no-repeat;
       background-size: contain;
@@ -968,12 +967,10 @@ $title_color: #4d5afa;
       text-align: center;
     }
   }
-  // .iconBox {
-  //   display: flex;
-  //   margin: auto;
-  //   width: 35%;
-  //   height: 100px;
-  // }
+  .iconBox {
+    display: flex;
+    justify-content: center;
+  }
 
   // Section 2
   .section2 {
