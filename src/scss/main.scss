@@ -757,9 +757,9 @@ $title_color: #4d5afa;
       }
       &__nb {
         @include kv-image;
-        width: 267px;
-        height: 215px;
-        background-image: url(../images/pad/nb.png);
+        width: 667px;
+        height: 537px;
+        background-image: url(../images/desktop/nb.png);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
@@ -805,15 +805,16 @@ $title_color: #4d5afa;
     display: flex;
     flex-direction: column;
     width: 80%;
-    height: auto;
+    height: 100%;
     margin: auto;
-    margin-top: 4rem;
-    margin-bottom: 4rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    // margin-bottom: 10%;
     &__title {
       background: url(./../images/desktop/ROG_ZEPHYRUS_TITLE.png) no-repeat;
-      background-size: cover;
+      background-size: contain;
       background-position: center;
-      height: 2.5em;
+      height: 4.2em;
     }
     &__sentence {
       height: 2em;
@@ -828,7 +829,7 @@ $title_color: #4d5afa;
       height: auto;
       color: #fff;
       font-size: 0.9rem;
-      line-height: 1.7em;
+      line-height: 1.9em;
       text-align: center;
     }
   }
@@ -842,16 +843,18 @@ $title_color: #4d5afa;
   // Section 2
   .section2 {
     position: relative;
-    flex-direction: column;
     width: 100%;
-    height: 100%;
+    padding-top: 50%;
+    display: flex;
 
     &__info {
       display: flex;
       flex-direction: column;
-      text-align: center;
+      position: absolute;
+      top: 20%;
+      left: 55%;
       margin: auto;
-      width: 70%;
+      width: 40%;
       margin-top: 1rem;
       &__design {
         font-family: rogfonts;
@@ -907,12 +910,15 @@ $title_color: #4d5afa;
     }
 
     &__productImg {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
-      height: 600px;
-      margin-top: -10%;
+      height: 900px;
       background-image: url(./../images/desktop/S17_Design_1_14.jpg);
-      background-size: cover;
-      background-position: 30% 50%;
+      background-size: 180%;
+      background-position: 50% 50%;
+      z-index: -1;
     }
   }
 
@@ -921,8 +927,8 @@ $title_color: #4d5afa;
     width: 100%;
     height: 100%;
     background: url(../images/desktop/S17_Design_2_14.jpg) no-repeat;
-    background-size: 280%;
-    background-position: 65% 10%;
+    background-size: 150%;
+    background-position: 50% 10%;
     &__description {
       width: 85%;
       height: 600px;
@@ -979,7 +985,7 @@ $title_color: #4d5afa;
       }
 
       &__description {
-        width: 70%;
+        width: 50%;
         color: #fff;
         font-size: 0.9rem;
         text-align: center;
