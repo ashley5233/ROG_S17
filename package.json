@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@splidejs/splide": "^2.4.21",
     "css-loader": "^6.2.0",
     "mini-css-extract-plugin": "^2.1.0",
     "node-sass": "^6.0.1",

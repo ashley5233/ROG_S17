@@ -7,39 +7,16 @@
     <title>2021 ROG Zephyrus S17</title>
 
     <link rel="stylesheet" href="./src/scss/reset.css" />
+    <!-- awesome font -->
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="dist/main.css" />
   </head>
   <body>
-    <!-- <header class="header">
-      <nav class="header__nav">
-        <div class="header__nav__logo">logo</div>
-        <div class="header__nav__tabs">
-          <ul>
-            <li class="nav__list">PRODUCTS</li>
-            <li class="nav__list">DOWNLOADS</li>
-            <li class="nav__list">INNOVATION</li>
-            <li class="nav__list">COMMUNITY</li>
-            <li class="nav__list">WHAT'S HOT</li>
-            <li class="nav__list">SUPPORT</li>
-          </ul>
-        </div>
-        <div class="header__nav__right-btns">123</div>
-      </nav>
-    </header>
- 
-    <div class="productTabBar">
-      <div class="productTabBar__type">ROG Zephyrus S17 GX703</div>
-      <div class="productTabBar__tabs">
-        <ul>
-          <li class="productTabBar__tab">Features</li>
-          <li class="productTabBar__tab">Tech Specs</li>
-          <li class="productTabBar__tab">Awards</li>
-          <li class="productTabBar__tab">Gallery</li>
-          <li class="productTabBar__tab">Support</li>
-        </ul>
-      </div>
-    </div> -->
-
     <div class="container">
       <!-- KV -->
       <section class="section1">
@@ -120,27 +97,44 @@
         </div>
       </div>
 
-      <!-- Product list -->
-      <div class="product-list">
-        <div class="product-list__design">
+      <!-- Product list slick -->
+      <div class="product-slider">
+        <input type="radio" id="control-1" name="control" />
+        <input type="radio" id="control-2" name="control" checked />
+        <input type="radio" id="control-3" name="control" />
+        <input type="radio" id="control-4" name="control" />
+        <input type="radio" id="control-5" name="control" />
+        <!--  Left/Right Button  -->
+        <div class="navigator slide-1">
+          <label for="control-3">
+            <div class="left-btn"><i class="fas fa-chevron-left"></i></div>
+          </label>
+          <label for="control-4">
+            <div class="left-btn"><i class="fas fa-chevron-right"></i></div>
+          </label>
+        </div>
+        <!-- Slick images -->
+        <div class="product-slider__design">
           <img src="/src/images/desktop/02__design__s2.jpeg" alt="" />
         </div>
-        <div class="product-list__design">
+        <div class="product-slider__design">
           <img src="/src/images/desktop/02__design__s3.jpeg" alt="" />
         </div>
-        <div class="product-list__design">
+        <div class="product-slider__design">
           <img src="/src/images/desktop/02__design__s4.jpeg" alt="" />
         </div>
-        <div class="product-list__design">
+        <div class="product-slider__design">
           <img src="/src/images/desktop/02__design__s5.jpeg" alt="" />
         </div>
-        <div class="product-list__design">
+        <div class="product-slider__design">
           <img src="/src/images/desktop/02__design__s1.jpeg" alt="" />
         </div>
-        <div class="product-list__btn">
-          <div class="product-list__btn__left">
-            <button>left</button>
-          </div>
+        <div class="controls-visible">
+          <label for="control-1"></label>
+          <label for="control-2"></label>
+          <label for="control-3"></label>
+          <label for="control-4"></label>
+          <label for="control-5"></label>
         </div>
       </div>
 
@@ -251,7 +245,7 @@
         </div>
       </section>
     </div>
-
+    <script src="/src/index.js"></script>
     <script src="dist/bundle.js"></script>
   </body>
 </html>

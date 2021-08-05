@@ -24,58 +24,6 @@ $title_color: #4d5afa;
 
 // mobile style
 @media screen and (min-width: 0px) {
-  .header {
-    background-color: $bg_color;
-    height: 60px;
-    font-family: segoeui, Microsoft JhengHei, sans-serif;
-    &__nav {
-      height: 100%;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      color: #fff;
-    }
-    &__nav__tabs {
-      // margin: 1rem;
-    }
-    .nav__list {
-      display: inline;
-      margin: 0.5rem;
-      color: #fff;
-      font-size: 13px;
-      &:hover {
-        cursor: pointer;
-        color: $hover_color;
-      }
-    }
-  }
-
-  .productTabBar {
-    height: 60px;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: $nav_color;
-
-    &__type {
-      font-size: 1.5rem;
-      padding-left: 2.5rem;
-    }
-
-    &__tab {
-      display: inline;
-      margin: 1rem;
-      &:hover {
-        cursor: pointer;
-        color: $hover_color;
-        border-bottom: 3px solid $hover_color;
-        border-radius: 2px 0px 2px 0px;
-      }
-    }
-  }
-
   .container {
     display: flex;
     flex-direction: column;
@@ -117,7 +65,7 @@ $title_color: #4d5afa;
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -60%);
         animation: nb_move 4s ease infinite;
       }
 
@@ -284,7 +232,7 @@ $title_color: #4d5afa;
     }
   }
 
-  .product-list {
+  .product-slider {
     width: 100%;
     height: 300px;
     white-space: nowrap;
@@ -297,6 +245,85 @@ $title_color: #4d5afa;
       img {
         object-fit: cover;
       }
+    }
+  }
+  // product slider
+  @mixin sliderControl($num) {
+    @for $i from 1 through $num {
+      input[type="radio"]:nth-of-type(#{$i}):checked
+        ~ .controls-visible
+        label:nth-of-type(#{$i}) {
+        background-color: #333;
+      }
+    }
+  }
+
+  .product-slider {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10% auto;
+    .navigator {
+      display: flex;
+      color: white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 100;
+    }
+    .left-btn,
+    .right-btn {
+      display: none;
+    }
+
+    &__design {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 0.5s transform ease-in-out;
+      img {
+        object-fit: cover;
+        width: inherit;
+        height: inherit;
+      }
+    }
+    input[type="radio"] {
+      position: relative;
+      z-index: 100;
+      display: none;
+    }
+    .controls-visible {
+      position: absolute;
+      width: 100%;
+      bottom: 0px;
+      text-align: center;
+    }
+    .controls-visible label {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background-color: #fff;
+      border-radius: 50%;
+      margin: 0 3px;
+      border: 2px solid #fff;
+    }
+    @include sliderControl(5);
+    input[type="radio"]:nth-of-type(1):checked ~ .product-slider__design {
+      transform: translateX(200%);
+    }
+    input[type="radio"]:nth-of-type(2):checked ~ .product-slider__design {
+      transform: translateX(100%);
+    }
+    input[type="radio"]:nth-of-type(3):checked ~ .product-slider__design {
+      transform: translateX(0%);
+    }
+    input[type="radio"]:nth-of-type(4):checked ~ .product-slider__design {
+      transform: translateX(-100%);
+    }
+    input[type="radio"]:nth-of-type(5):checked ~ .product-slider__design {
+      transform: translateX(-200%);
     }
   }
 
@@ -496,8 +523,8 @@ $title_color: #4d5afa;
       }
       &__nb {
         @include kv-image;
-        width: 267px;
-        height: 215px;
+        width: 328px;
+        height: 260px;
         background-image: url(../images/pad/nb.png);
         background-size: cover;
         background-repeat: no-repeat;
@@ -505,7 +532,7 @@ $title_color: #4d5afa;
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -60%);
         animation: nb_move 4s ease infinite;
       }
 
@@ -550,9 +577,9 @@ $title_color: #4d5afa;
     margin-bottom: 4rem;
     &__title {
       background: url(./../images/desktop/ROG_ZEPHYRUS_TITLE.png) no-repeat;
-      background-size: cover;
+      background-size: contain;
       background-position: center;
-      height: 2.5em;
+      height: 3em;
     }
     &__sentence {
       height: 2em;
@@ -571,12 +598,6 @@ $title_color: #4d5afa;
       text-align: center;
     }
   }
-  // .iconBox {
-  //   display: flex;
-  //   margin: auto;
-  //   width: 35%;
-  //   height: 100px;
-  // }
 
   // Section 2
   .section2 {
@@ -673,19 +694,91 @@ $title_color: #4d5afa;
     }
   }
 
-  .product-list {
-    width: 100%;
-    height: 300px;
-    white-space: nowrap;
-    overflow: hidden;
+  // product slider
+  @mixin sliderControl($num) {
+    @for $i from 1 through $num {
+      input[type="radio"]:nth-of-type(#{$i}):checked
+        ~ .controls-visible
+        label:nth-of-type(#{$i}) {
+        background-color: #333;
+      }
+    }
+  }
+
+  .product-slider {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10% auto;
+    .navigator {
+      display: flex;
+      color: white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 100;
+    }
+    .left-btn,
+    .right-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+      background-color: rgba(256, 256, 256, 0.5);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin: 5rem;
+    }
+
     &__design {
-      display: inline-block;
-      width: 400px;
-      // min-width: calc(100% * 1 / 4);
-      height: 250px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 0.5s transform ease-in-out;
       img {
         object-fit: cover;
+        width: inherit;
+        height: inherit;
       }
+    }
+    input[type="radio"] {
+      position: relative;
+      z-index: 100;
+      display: none;
+    }
+    .controls-visible {
+      position: absolute;
+      width: 100%;
+      bottom: 0px;
+      text-align: center;
+    }
+    .controls-visible label {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background-color: #fff;
+      border-radius: 50%;
+      margin: 0 3px;
+      border: 2px solid #fff;
+    }
+    @include sliderControl(5);
+    input[type="radio"]:nth-of-type(1):checked ~ .product-slider__design {
+      transform: translateY(0%);
+    }
+    input[type="radio"]:nth-of-type(2):checked ~ .product-slider__design {
+      transform: translateX(-100%);
+    }
+    input[type="radio"]:nth-of-type(3):checked ~ .product-slider__design {
+      transform: translateX(-200%);
+    }
+    input[type="radio"]:nth-of-type(4):checked ~ .product-slider__design {
+      transform: translateX(-300%);
+    }
+    input[type="radio"]:nth-of-type(5):checked ~ .product-slider__design {
+      transform: translateX(0%);
     }
   }
 
@@ -892,8 +985,8 @@ $title_color: #4d5afa;
       }
       &__nb {
         @include kv-image;
-        width: 667px;
-        height: 537px;
+        width: 630px;
+        height: 500px;
         background-image: url(../images/desktop/nb.png);
         background-size: cover;
         background-repeat: no-repeat;
@@ -901,7 +994,7 @@ $title_color: #4d5afa;
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -60%);
         animation: nb_move 4s ease infinite;
       }
 
@@ -1072,19 +1165,91 @@ $title_color: #4d5afa;
     }
   }
 
-  .product-list {
-    width: 100%;
-    height: 300px;
-    white-space: nowrap;
-    overflow: hidden;
+  // product slider
+  @mixin sliderControl($num) {
+    @for $i from 1 through $num {
+      input[type="radio"]:nth-of-type(#{$i}):checked
+        ~ .controls-visible
+        label:nth-of-type(#{$i}) {
+        background-color: #333;
+      }
+    }
+  }
+
+  .product-slider {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10% auto;
+    .navigator {
+      display: flex;
+      color: white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 100;
+    }
+    .left-btn,
+    .right-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+      background-color: rgba(256, 256, 256, 0.5);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin: 5rem;
+    }
+
     &__design {
-      display: inline-block;
-      width: 400px;
-      // min-width: calc(100% * 1 / 4);
-      height: 250px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 0.5s transform ease-in-out;
       img {
         object-fit: cover;
+        width: inherit;
+        height: inherit;
       }
+    }
+    input[type="radio"] {
+      position: relative;
+      z-index: 100;
+      display: none;
+    }
+    .controls-visible {
+      position: absolute;
+      width: 100%;
+      bottom: 0px;
+      text-align: center;
+    }
+    .controls-visible label {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background-color: #fff;
+      border-radius: 50%;
+      margin: 0 3px;
+      border: 2px solid #fff;
+    }
+    @include sliderControl(5);
+    input[type="radio"]:nth-of-type(1):checked ~ .product-slider__design {
+      transform: translateY(0%);
+    }
+    input[type="radio"]:nth-of-type(2):checked ~ .product-slider__design {
+      transform: translateX(-100%);
+    }
+    input[type="radio"]:nth-of-type(3):checked ~ .product-slider__design {
+      transform: translateX(-200%);
+    }
+    input[type="radio"]:nth-of-type(4):checked ~ .product-slider__design {
+      transform: translateX(-300%);
+    }
+    input[type="radio"]:nth-of-type(5):checked ~ .product-slider__design {
+      transform: translateX(0%);
     }
   }
 
