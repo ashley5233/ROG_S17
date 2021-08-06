@@ -523,7 +523,7 @@ label:nth-of-type(5) {
       top: 0;
       width: 328px;
       height: 260px;
-      background-image: url(2aa0844354624c32049b.png);
+      background-image: url(5886ea7651e50f3c937c.png);
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center center;
@@ -677,7 +677,7 @@ label:nth-of-type(5) {
       margin: 6rem; }
     .product-slider__design {
       display: flex;
-      justify-content: center;
+      justify-content: cencter;
       align-items: center;
       transition: 0.5s transform ease-in-out; }
       .product-slider__design img {
