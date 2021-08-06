@@ -2,6 +2,7 @@ let current = 0;
 const designs = document.querySelectorAll(".product-slider__design");
 const sliderBtn = document.querySelector(".navigator");
 
+// handle slider next and prev btn
 function handleNext() {
   console.log("current:", current);
   document.getElementById(`control-${current + 1}`).checked = true;

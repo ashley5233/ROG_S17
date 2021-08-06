@@ -502,6 +502,7 @@ $title_color: #4d5afa;
       display: flex;
       flex-direction: column;
       justify-content: center;
+      align-items: center;
       &__name {
         color: $title_color;
         font-family: rogfonts;
@@ -510,7 +511,13 @@ $title_color: #4d5afa;
       }
       &__title {
         font-family: Trade-Gothic-LT-Bold;
-        font-size: 3rem;
+        font-size: 1.5rem;
+        padding: 1rem;
+      }
+      &__info {
+        width: 50%;
+        font-size: 0.8rem;
+        line-height: 1.5rem;
       }
     }
     .wrapper {
@@ -599,6 +606,7 @@ $title_color: #4d5afa;
   }
 }
 
+// pad style
 @media screen and (min-width: 736px) {
   // Section one
   .section1 {
@@ -1073,11 +1081,19 @@ $title_color: #4d5afa;
       }
       &__title {
         font-family: Trade-Gothic-LT-Bold;
+        font-size: 2rem;
+        padding: 1rem;
+      }
+      &__info {
+        width: 50%;
+        font-size: 0.8rem;
+        line-height: 1.5rem;
       }
     }
   }
 }
 
+// desktop style
 @media screen and (min-width: 1281px) {
   // Section one
   .section1 {

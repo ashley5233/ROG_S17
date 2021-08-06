@@ -394,7 +394,8 @@ label:nth-of-type(5) {
     .section4__productInfo {
       display: flex;
       flex-direction: column;
-      justify-content: center; }
+      justify-content: center;
+      align-items: center; }
       .section4__productInfo__name {
         color: #4d5afa;
         font-family: rogfonts;
@@ -402,7 +403,12 @@ label:nth-of-type(5) {
         margin: 2rem auto; }
       .section4__productInfo__title {
         font-family: Trade-Gothic-LT-Bold;
-        font-size: 3rem; }
+        font-size: 1.5rem;
+        padding: 1rem; }
+      .section4__productInfo__info {
+        width: 50%;
+        font-size: 0.8rem;
+        line-height: 1.5rem; }
     .section4 .wrapper {
       display: flex;
       justify-content: center;
@@ -860,7 +866,13 @@ label:nth-of-type(5) {
       font-size: 3rem;
       margin: 2.5rem auto; }
     .section4__productInfo__title {
-      font-family: Trade-Gothic-LT-Bold; } }
+      font-family: Trade-Gothic-LT-Bold;
+      font-size: 2rem;
+      padding: 1rem; }
+    .section4__productInfo__info {
+      width: 50%;
+      font-size: 0.8rem;
+      line-height: 1.5rem; } }
 
 @media screen and (min-width: 1281px) {
   .section1__container {
