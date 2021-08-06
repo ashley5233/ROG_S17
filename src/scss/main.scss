@@ -302,8 +302,8 @@ $title_color: #4d5afa;
     }
     .controls-visible label {
       display: inline-block;
-      width: 10px;
-      height: 10px;
+      width: 5px;
+      height: 5px;
       background-color: #fff;
       border-radius: 50%;
       margin: 0 3px;
@@ -833,7 +833,7 @@ $title_color: #4d5afa;
       width: 50px;
       height: 50px;
       border-radius: 50%;
-      margin: 5rem;
+      margin: 6rem;
     }
 
     &__design {
@@ -860,8 +860,8 @@ $title_color: #4d5afa;
     }
     .controls-visible label {
       display: inline-block;
-      width: 10px;
-      height: 10px;
+      width: 5px;
+      height: 5px;
       background-color: #fff;
       border-radius: 50%;
       margin: 0 3px;
@@ -1325,7 +1325,7 @@ $title_color: #4d5afa;
     }
 
     &__design {
-      width: 500px;
+      width: 600px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -1349,13 +1349,14 @@ $title_color: #4d5afa;
     }
     .controls-visible label {
       display: inline-block;
-      width: 10px;
-      height: 10px;
+      width: 5px;
+      height: 5px;
       background-color: #fff;
       border-radius: 50%;
       margin: 0 3px;
       border: 2px solid #fff;
     }
+
     @include sliderControl(5);
     input[type="radio"]:nth-of-type(1):checked ~ .product-slider__design {
       transform: translateX(200%);
