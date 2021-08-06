@@ -463,7 +463,8 @@ $title_color: #4d5afa;
         background-position: center center;
         top: 0;
         left: 0;
-        animation: fansChange 2s infinite ease-in;
+        transition: 0.5s animation;
+        animation: fansChange 2s infinite ease-in-out;
       }
 
       @keyframes fansChange {

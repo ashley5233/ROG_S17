@@ -371,7 +371,8 @@ label:nth-of-type(5) {
         background-position: center center;
         top: 0;
         left: 0;
-        animation: fansChange 2s infinite ease-in; }
+        transition: 0.5s animation;
+        animation: fansChange 2s infinite ease-in-out; }
   @keyframes fansChange {
     0% {
       background-image: url(6a4d7ef958432d27c9f7.jpeg); }
