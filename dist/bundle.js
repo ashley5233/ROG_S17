@@ -7,15 +7,16 @@
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
 /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./src/scss/main.scss":
 /*!****************************!*\
   !*** ./src/scss/main.scss ***!
   \****************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("throw new Error(\"Module build failed (from ./node_modules/mini-css-extract-plugin/dist/loader.js):\\nModuleBuildError: Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\\nSassError: Invalid CSS after \\\"...ackground: url(\\\": expected expression (e.g. 1px, bold), was \\\"../images/desktop/0\\\"\\n        on line 859 of src/scss/main.scss\\n>>         background: url(../images/desktop/02__design__s2.jpeg center center;\\n   ------------------------^\\n\\n    at processResult (/Users/ashley/ROG_S17/node_modules/webpack/lib/NormalModule.js:703:19)\\n    at runLoaders (/Users/ashley/ROG_S17/node_modules/webpack/lib/NormalModule.js:809:5)\\n    at /Users/ashley/ROG_S17/node_modules/loader-runner/lib/LoaderRunner.js:399:11\\n    at /Users/ashley/ROG_S17/node_modules/loader-runner/lib/LoaderRunner.js:251:18\\n    at context.callback (/Users/ashley/ROG_S17/node_modules/loader-runner/lib/LoaderRunner.js:124:13)\\n    at Object.render [as callback] (/Users/ashley/ROG_S17/node_modules/sass-loader/dist/index.js:54:7)\\n    at Object.done [as callback] (/Users/ashley/ROG_S17/node_modules/neo-async/async.js:8069:18)\\n    at options.error (/Users/ashley/ROG_S17/node_modules/node-sass/lib/index.js:293:32)\");\n\n//# sourceURL=webpack://ROG_S17/./src/scss/main.scss?");
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://ROG_S17/./src/scss/main.scss?");
 
 /***/ }),
 
@@ -25,7 +26,6 @@ eval("throw new Error(\"Module build failed (from ./node_modules/mini-css-extrac
   \*********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./scss/main.scss */ \"./src/scss/main.scss\");\n\nconsole.log(\"JS loaded!\");\n\n\n//# sourceURL=webpack://ROG_S17/./src/main.js?");
 
 /***/ })
