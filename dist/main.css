@@ -366,7 +366,7 @@ label:nth-of-type(5) {
         width: 100%;
         height: 100%;
         position: absolute;
-        background-image: url(6a4d7ef958432d27c9f7.jpeg);
+        background: url(6a4d7ef958432d27c9f7.jpeg);
         background-size: 150%;
         background-position: center center;
         top: 0;
