@@ -1,4 +1,4 @@
-# ROG_S17 Interview
+# ROG_S17
 
 ![index-image](https://i.imgur.com/3LfPrDp.png)
 
